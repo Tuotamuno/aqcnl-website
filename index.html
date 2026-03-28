@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aquiline Crystal Nigeria Limited – Business Integration Company</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0B1F4B;
+      --gold: #C8972B;
+      --light-gold: #F5E6C8;
+      --teal: #1A6B7A;
+      --light-gray: #F4F6F9;
+      --text: #2C2C2C;
+      --muted: #6B7280;
+      --white: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── NAV ─── */
+    nav {
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      height: 75px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+
+    .logo-text { color: var(--white); }
+    .logo-text .company { font-size: 17px; font-weight: 700; letter-spacing: 0.5px; }
+    .logo-text .tagline { font-size: 10px; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 9px 22px;
+      border-radius: 4px;
+      font-weight: 700 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: #E5AB3A !important; color: var(--navy) !important; }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #163372 50%, var(--teal) 100%);
+      color: var(--white);
+      padding: 100px 60px;
+      position: relative;
+      overflow: hidden;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 500px;
+      height: 500px;
+      border: 80px solid rgba(200,151,43,0.12);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: 80px;
+      bottom: -120px;
+      width: 350px;
+      height: 350px;
+      border: 60px solid rgba(200,151,43,0.08);
+      border-radius: 50%;
+    }
+
+    .hero-content { max-width: 700px; position: relative; z-index: 2; }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(200,151,43,0.2);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 54px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin-bottom: 38px;
+    }
+
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 14px 32px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: background 0.2s, transform 0.2s;
+    }
+ .btn-primary:hover { background: #E5AB3A; transform: translateY(-1px); }
+
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.5);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+
+    /* ─── STATS STRIP ─── */
+    .stats-strip {
+      background: var(--white);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 3px solid var(--light-gold);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .stat-item {
+      padding: 28px 20px;
+      text-align: center;
+      border-right: 1px solid #E8ECF0;
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-item .number {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .stat-item .number span { color: var(--gold); }
+
+    .stat-item .label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 80px 60px; }
+
+    .section-tag {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 50px;
+    }
+
+    /* ─── ABOUT ─── */
+    .about-section { background: var(--white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-visual {
+      background: linear-gradient(145deg, var(--navy), var(--teal));
+      border-radius: 12px;
+      padding: 50px 40px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: 'AC';
+      position: absolute;
+      right: -20px;
+      bottom: -30px;
+      font-size: 150px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.05);
+      line-height: 1;
+    }
+
+    .about-visual h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: var(--gold);
+    }
+
+    .about-visual p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .about-values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .value-chip {
+      background: rgba(200,151,43,0.15);
+      border-left: 3px solid var(--gold);
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .about-text p { margin-bottom: 16px; font-size: 16px; color: #444; }
+
+    .mission-box {
+      background: var(--light-gold);
+      border-left: 4px solid var(--gold);
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 24px;
+    }
+
+    .mission-box strong { color: var(--navy); display: block; margin-bottom: 6px; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; }
+
+    /* ─── SERVICES ─── */
+    .services-section { background: var(--light-gray); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 36px 30px;
+      border: 1px solid #E2E8F0;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+ .service-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); border-color: var(--gold); }
+    .service-card:hover::after { transform: scaleX(1); }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .service-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ─── WHY US ─── */
+    .why-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .why-section h2 { color: var(--white); }
+    .why-section .section-tag { color: var(--gold); }
+    .why-section .section-intro { color: rgba(255,255,255,0.75); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 20px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 28px 24px;
+      transition: background 0.2s;
+    }
+
+    .why-item:hover { background: rgba(255,255,255,0.1); }
+
+    .why-number {
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--gold);
+      opacity: 0.4;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .why-item h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--gold); }
+    .why-item p { font-size: 14px; color: rgba(255,255,255,0.75); }
+
+    /* ─── SECTORS ─── */
+    .sectors-section { background: var(--white); }
+
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .sector-card {
+      background: var(--light-gray);
+      border-radius: 10px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: transform 0.2s, background 0.2s;
+      border: 2px solid transparent;
+    }
+
+    .sector-card:hover { transform: translateY(-4px); background: var(--light-gold); border-color: var(--gold); }
+
+    .sector-icon { font-size: 36px; margin-bottom: 14px; }
+
+    .sector-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .sector-card p { font-size: 13px; color: var(--muted); }
+
+    /* ─── PROCESS ─── */
+    .process-section { background: var(--light-gray); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(to right, var(--gold), var(--teal));
+      z-index: 0;
+    }
+
+    .step {
+      text-align: center;
+      padding: 0 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 28px;
+      border: 4px solid var(--white);
+      box-shadow: 0 4px 15px rgba(11,31,75,0.25);
+    }
+
+    .step h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .step p { font-size: 13px; color: var(--muted); }
+
+    /* ─── TESTIMONIAL ─── */
+    .testimonial-section {
+      background: linear-gradient(135deg, var(--teal), var(--navy));
+      color: var(--white);
+      text-align: center;
+      padding: 90px 60px;
+    }
+
+    .testimonial-section h2 { color: var(--white); margin-bottom: 50px; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 32px;
+      text-align: left;
+    }
+ .quote-mark { font-size: 48px; color: var(--gold); line-height: 1; margin-bottom: 10px; }
+    .testimonial-card p { font-size: 15px; color: rgba(255,255,255,0.85); margin-bottom: 20px; line-height: 1.7; }
+    .testimonial-author strong { display: block; color: var(--gold); font-size: 14px; }
+    .testimonial-author span { font-size: 12px; color: rgba(255,255,255,0.55); }
+
+    /* ─── CONTACT ─── */
+    .contact-section { background: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h3 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 20px; }
+
+    .contact-detail {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding: 16px;
+      background: var(--light-gray);
+      border-radius: 8px;
+    }
+
+    .contact-detail .icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .contact-detail strong { display: block; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .contact-detail p { font-size: 15px; color: var(--navy); font-weight: 500; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 18px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+    .form-group { display: flex; flex-direction: column; }
+
+    label { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+
+    input, select, textarea {
+      border: 1.5px solid #D1D5DB;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus { border-color: var(--navy); }
+
+    textarea { resize: vertical; min-height: 120px; }
+
+    .form-submit {
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      align-self: flex-start;
+    }
+
+    .form-submit:hover { background: var(--teal); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #07122E;
+      color: rgba(255,255,255,0.7);
+      padding: 60px 60px 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 16px; }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { font-size: 14px; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .footer-bottom a { color: var(--gold); }
+
+    .rc-badge {
+      background: rgba(200,151,43,0.15);
+      border: 1px solid rgba(200,151,43,0.3);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: var(--gold);
+    }
+    @media (max-width: 1024px) {
+
+nav {
+  padding: 0 25px;
+}
+
+section {
+  padding: 60px 25px;
+}
+
+.services-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sectors-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about-grid,
+.contact-grid {
+  grid-template-columns: 1fr;
+}
+
+.testimonials-grid {
+  grid-template-columns: 1fr;
+}
+
+.footer-grid {
+  grid-template-columns: 1fr 1fr;
+}
+}
+@media (max-width: 768px) {
+
+nav {
+  flex-wrap: wrap;
+  height: auto;
+  padding: 15px;
+}
+
+.nav-links {
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.hero {
+  padding: 70px 20px;
+}
+
+section {
+  padding: 50px 20px;
+}
+
+.stats-strip {
+  grid-template-columns: 1fr 1fr;
+}
+
+.services-grid {
+  grid-template-columns: 1fr;
+}
+
+.sectors-grid {
+  grid-template-columns: 1fr;
+}
+
+.why-grid {
+  grid-template-columns: 1fr;
+}
+
+.process-steps {
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.process-steps::before {
+  display: none;
+}
+
+.form-row {
+  grid-template-columns: 1fr;
+}
+
+.footer-grid {
+  grid-template-columns: 1fr;
+}
+
+.footer-bottom {
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+}
+.logo-img {
+  height: 48px;
+  width: auto;
+}
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav>
+    <div class="logo">
+        <img src="images/logo.png" alt="Aquiline Crystal Nigeria Limited" class="logo-img">
+    
+        <div class="logo-text">
+          <div class="company">Aquiline Crystal Nigeria Limited</div>
+          <div class="tagline">Business Integration Specialists</div>
+        </div>
+    </div>
+  <ul class="nav-links">
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#sectors">Sectors</a></li>
+    <li><a href="#process">Our Process</a></li>
+    <li><a href="#contact" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Nigeria's Premier Business Integration Company</div>
+    <h1>Seamlessly Connecting <span>Your Business</span> to Limitless Possibilities</h1>
+    <p>Aquiline Crystal Nigeria Limited delivers world-class business integration solutions that unify operations, streamline processes, and accelerate sustainable growth across Nigeria and West Africa.</p>
+    <div class="hero-buttons">
+      <a href="#services" class="btn-primary">Explore Our Services</a>
+      <a href="#contact" class="btn-outline">Book a Consultation</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── STATS STRIP ─── -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <div class="number">15<span>+</span></div>
+    <div class="label">Years of Excellence</div>
+  </div>
+  <div class="stat-item">
+    <div class="number">300<span>+</span></div>
+    <div class="label">Clients Served</div>
+  </div>
+  <div class="stat-item">
+    <div class="number">12<span></span></div>
+    <div class="label">Sectors Covered</div>
+  </div>
+  <div class="stat-item">
+    <div class="number">98<span>%</span></div>
+    <div class="label">Client Satisfaction Rate</div>
+  </div>
+</div>
+
+
+<!-- ─── ABOUT ─── -->
+<section class="about-section" id="about">
+  <div class="section-tag">Who We Are</div>
+  <div class="about-grid">
+    <div class="about-visual">
+      <h3>Our Story & Vision</h3>
+      <p>Founded with a bold vision to redefine how Nigerian and West African businesses connect, collaborate, and compete, Aquiline Crystal Nigeria Limited has grown into a trusted authority in business integration — bridging gaps between strategy and execution.</p>
+      <p>We believe every great business deserves an infrastructure that works as one — and we exist to build it. From SMEs to large conglomerates, we tailor integration solutions that fit, scale, and deliver.</p>
+      <div class="about-values">
+        <div class="value-chip">🏆 Integrity</div>
+        <div class="value-chip">💡 Innovation</div>
+        <div class="value-chip">🤝 Partnerships</div>
+        <div class="value-chip">📈 Results</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <h2>Powering Businesses Through Intelligent Integration</h2>
+      <p>At Aquiline Crystal Nigeria Limited, we specialize in the art and science of bringing together the fragmented components of your business — people, processes, systems, and technology — into a cohesive, high-performing ecosystem.</p>
+      <p>Business integration is no longer optional; it is the backbone of competitive advantage. We help organizations eliminate operational silos, enhance communication across departments, automate workflows, and align business goals with digital capabilities — all within the Nigerian and broader African business context.</p>
+      <p>Our team of seasoned consultants, technology architects, financial advisors, and project managers work hand-in-hand with your organization to design and deploy integration strategies that are not just effective today but resilient for tomorrow.</p>
+      <div class="mission-box">
+        <strong>Our Mission</strong>
+        To empower Nigerian and African businesses through transformative integration solutions that unlock efficiency, drive growth, and position our clients for enduring success in a rapidly evolving global economy.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── SERVICES ─── -->
+<section class="services-section" id="services">
+ <div class="section-tag">What We Do</div>
+  <h2>Comprehensive Business Integration Services</h2>
+  <p class="section-intro">We offer a full spectrum of integration services designed to unify every dimension of your business — from strategy and technology to supply chains and compliance.</p>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">🔗</div>
+      <h3>Enterprise Systems Integration</h3>
+      <p>We connect disparate enterprise platforms — ERP, CRM, HRM, and accounting systems — into one seamless, data-driven ecosystem, eliminating redundancy and enabling real-time decision-making across your organization.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h3>Business Process Optimization</h3>
+      <p>We audit, redesign, and automate your core business processes to remove inefficiencies, reduce operational costs, and improve output quality — ensuring every workflow supports your strategic objectives.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🤝</div>
+      <h3>Mergers, Acquisitions & Business Consolidation</h3>
+      <p>Our experts guide businesses through the complex integration challenges of mergers and acquisitions — harmonizing cultures, systems, financials, and operations for a smooth, value-maximizing transition.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🌐</div>
+      <h3>Supply Chain & Vendor Integration</h3>
+      <p>We build robust, transparent supply chain networks — integrating vendors, logistics partners, and procurement systems to improve visibility, reduce lead times, and strengthen your value chain from source to customer.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <h3>Digital Transformation Advisory</h3>
+      <p>We help businesses transition confidently from traditional operations to digitally-enabled models — crafting a roadmap for technology adoption, data management, automation, and digital culture change.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📋</div>
+      <h3>Regulatory Compliance & Governance Integration</h3>
+      <p>We align your business practices with Nigerian regulatory standards — CAC, FIRS, SEC, CBN, NAFDAC, and sector-specific bodies — ensuring compliance is embedded into your operations, not bolted on.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">💼</div>
+      <h3>Financial Systems Integration</h3>
+      <p>From treasury management and payroll to investment reconciliation and financial reporting, we integrate financial workflows that give management clear, accurate, and timely visibility into the organization's fiscal health.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🧠</div>
+      <h3>Strategic Business Development</h3>
+      <p>We help organizations identify new market opportunities, structure viable business models, establish strategic partnerships, and build investor-ready frameworks — creating a foundation for scalable, sustainable expansion.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🔒</div>
+      <h3>Data Governance & Information Security Integration</h3>
+      <p>We establish data management frameworks and cybersecurity protocols that protect your critical business information, ensure data integrity, and build stakeholder confidence in your digital operations.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ─── WHY US ─── -->
+<section class="why-section" id="why">
+  <div class="section-tag">Why Choose Us</div>
+  <h2>The Aquiline Crystal Advantage</h2>
+  <p class="section-intro">We are not just consultants — we are strategic partners committed to your long-term success. Here is what sets us apart.</p>
+
+  <div class="why-grid">
+ <div class="why-item">
+      <div class="why-number">01</div>
+      <div>
+        <h3>Deep Nigerian Market Expertise</h3>
+        <p>We understand the unique economic landscape, regulatory environment, cultural dynamics, and business realities of Nigeria and West Africa — ensuring our solutions are locally relevant, not generic templates.</p>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-number">02</div>
+      <div>
+        <h3>End-to-End Integration Capability</h3>
+        <p>Unlike specialized niche firms, we offer comprehensive integration across strategy, technology, finance, operations, HR, and compliance — providing a single, accountable partner for your entire integration journey.</p>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-number">03</div>
+      <div>
+        <h3>Tailored, Scalable Solutions</h3>
+        <p>Every business is unique. We design bespoke integration frameworks built around your specific goals, constraints, and growth trajectory — solutions that scale as you scale, without requiring a complete overhaul.</p>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-number">04</div>
+      <div>
+        <h3>Proven Track Record</h3>
+        <p>With over 300 successfully completed engagements across diverse industries, our portfolio speaks volumes. We have helped startups, SMEs, and blue-chip corporations transform their operations and achieve measurable results.</p>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-number">05</div>
+      <div>
+        <h3>Multi-Disciplinary Expert Team</h3>
+        <p>Our team brings together professionals from consulting, technology, finance, law, supply chain, and project management — offering you a breadth of expertise under one roof that few integration firms can match.</p>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-number">06</div>
+      <div>
+        <h3>Commitment to Long-Term Partnership</h3>
+        <p>We don't disappear after project delivery. We build lasting relationships, providing continuous support, performance monitoring, and iterative improvement to ensure your integration continues to deliver value over time.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ─── SECTORS ─── -->
+<section class="sectors-section" id="sectors">
+  <div class="section-tag">Industries We Serve</div>
+  <h2>Sector Experience Across the Nigerian Economy</h2>
+  <p class="section-intro">Our integration expertise spans the full breadth of Nigeria's economy, enabling us to deliver contextually intelligent solutions across diverse industries.</p>
+
+  <div class="sectors-grid">
+    <div class="sector-card">
+      <div class="sector-icon">🛢️</div>
+      <h3>Oil & Gas</h3>
+      <p>Upstream, midstream & downstream integration</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🏦</div>
+      <h3>Banking & Finance</h3>
+      <p>Fintech, banking operations & financial services</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">📡</div>
+      <h3>Telecommunications</h3>
+      <p>Network integration & digital services</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🏥</div>
+      <h3>Healthcare</h3>
+      <p>Hospital systems, pharma & health tech</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🚜</div>
+      <h3>Agriculture</h3>
+      <p>Agribusiness, value chain & agri-tech</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🏗️</div>
+      <h3>Real Estate & Construction</h3>
+      <p>Project delivery, procurement & development</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🛒</div>
+      <h3>Retail & FMCG</h3>
+<p>Distribution, inventory & sales integration</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🎓</div>
+      <h3>Education</h3>
+      <p>EdTech, institutional management & systems</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">⚡</div>
+      <h3>Energy & Power</h3>
+      <p>Utilities, renewables & power distribution</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🚢</div>
+      <h3>Logistics & Transport</h3>
+      <p>Fleet, freight, ports & supply chains</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🏛️</div>
+      <h3>Government & Public Sector</h3>
+      <p>MDAs, IGR, e-governance & public services</p>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🏭</div>
+      <h3>Manufacturing</h3>
+      <p>Production systems, ERP & industrial integration</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── PROCESS ─── -->
+<section class="process-section" id="process">
+  <div class="section-tag">How We Work</div>
+  <h2>Our Proven Integration Process</h2>
+  <p class="section-intro">A structured, collaborative methodology that ensures every integration engagement delivers clarity, value, and lasting results.</p>
+
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-circle">🔍</div>
+      <h3>Discovery & Assessment</h3>
+      <p>We conduct an in-depth diagnostic of your business — mapping systems, workflows, challenges, and strategic goals to create a complete integration landscape picture.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">🗺️</div>
+      <h3>Strategy & Blueprint</h3>
+      <p>We co-develop a customized integration roadmap with clear milestones, resource plans, technology recommendations, and measurable outcomes aligned to your vision.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">⚙️</div>
+      <h3>Design & Development</h3>
+      <p>Our experts engineer the integration architecture — configuring systems, redesigning processes, and building the frameworks needed to bring your blueprint to life.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">🚀</div>
+      <h3>Implementation</h3>
+      <p>We execute the integration plan with precision, managing change, training teams, and deploying solutions in a structured, minimum-disruption manner.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">📈</div>
+      <h3>Optimization & Support</h3>
+      <p>Post-deployment, we monitor performance, fine-tune the integration, and provide ongoing support to ensure continuous improvement and sustained value delivery.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── TESTIMONIALS ─── -->
+<section class="testimonial-section">
+  <h2>What Our Clients Say</h2>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p>Aquiline Crystal transformed how our group of companies operates. Within six months of their enterprise integration project, we reduced operational costs by 32% and our reporting time dropped from 2 weeks to 2 days. Their team truly understands the Nigerian business environment.</p>
+      <div class="testimonial-author">
+        <strong>Chukwuemeka Okafor</strong>
+        <span>Group Managing Director, Okafor Holdings</span>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p>The M&A integration support we received during our acquisition was nothing short of exceptional. They managed the complexity of merging two company cultures and ERP systems simultaneously. We are now operating as a single, unified entity far ahead of schedule.</p>
+      <div class="testimonial-author">
+        <strong>Fatima Aliyu-Garba</strong>
+        <span>CEO, Sahara Alliance Industrial Ltd</span>
+      </div>
+    </div>
+ <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p>As a fast-scaling fintech, we needed our compliance, operations, and technology to grow in sync. Aquiline Crystal designed an integration model that has since become the foundation of how we operate. I recommend them without reservation.</p>
+      <div class="testimonial-author">
+        <strong>Adewale Nwosu</strong>
+        <span>Founder & CTO, PalmPay360 Technologies</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── CONTACT ─── -->
+<section class="contact-section" id="contact">
+  <div class="section-tag">Get In Touch</div>
+  <h2>Let's Integrate Your Business for Success</h2>
+  <p class="section-intro">Ready to eliminate operational silos and unlock your organization's full potential? Reach out to our team today for a no-obligation consultation.</p>
+
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+
+      <div class="contact-detail">
+        <span class="icon">📍</span>
+        <div>
+          <strong>Head Office</strong>
+          <p>Plot 14, Ahmadu Bello Way, Victoria Island, Lagos, Nigeria</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <span class="icon">📞</span>
+        <div>
+          <strong>Phone</strong>
+          <p>+234 (0) 800 AQUILINE<br/>+234 (0) 1 280 0000</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <span class="icon">✉️</span>
+        <div>
+          <strong>Email</strong>
+          <p>info@aquilinecrystal.com.ng<br/>consulting@aquilinecrystal.com.ng</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <span class="icon">🕐</span>
+        <div>
+          <strong>Business Hours</strong>
+          <p>Monday – Friday: 8:00 AM – 6:00 PM<br/>Saturday: 9:00 AM – 2:00 PM</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <span class="icon">🏢</span>
+        <div>
+          <strong>Regional Office</strong>
+          <p>Suite 202, Emeka Anyaoku House,<br/>Plot 1, Ralph Shodeinde Street, Central Business District, Abuja</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <form class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" placeholder="Enter your first name" />
+          </div>
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" placeholder="Enter your last name" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+234 xxx xxx xxxx" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Company / Organization</label>
+          <input type="text" placeholder="Your company name" />
+        </div>
+        <div class="form-group">
+          <label>Service of Interest *</label>
+          <select>
+            <option value="">— Select a Service —</option>
+            <option>Enterprise Systems Integration</option>
+            <option>Business Process Optimization</option>
+            <option>Mergers, Acquisitions & Consolidation</option>
+            <option>Supply Chain & Vendor Integration</option>
+            <option>Digital Transformation Advisory</option>
+            <option>Regulatory Compliance & Governance</option>
+            <option>Financial Systems Integration</option>
+            <option>Strategic Business Development</option>
+            <option>Data Governance & Security Integration</option>
+ <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tell Us About Your Integration Needs *</label>
+          <textarea placeholder="Briefly describe your business challenge or the integration outcome you are seeking..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Enquiry →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-icon">AC</div>
+        <div class="logo-text">
+          <div class="company" style="color:#fff; font-size:16px;">Aquiline Crystal Nigeria Limited</div>
+          <div class="tagline">Business Integration Specialists</div>
+        </div>
+      </div>
+      <p>We are Nigeria's foremost business integration company — dedicated to unifying people, processes, technology, and strategy into high-performance organizations. Registered with the Corporate Affairs Commission (CAC), Nigeria.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Enterprise Integration</a></li>
+        <li><a href="#">Process Optimization</a></li>
+        <li><a href="#">M&A Integration</a></li>
+        <li><a href="#">Supply Chain Integration</a></li>
+        <li><a href="#">Digital Transformation</a></li>
+        <li><a href="#">Regulatory Compliance</a></li>
+        <li><a href="#">Financial Integration</a></li>
+        <li><a href="#">Data Governance</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Sectors We Serve</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Insights & Blog</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Partnerships</a></li>
+        <li><a href="#">CSR Initiatives</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 Aquiline Crystal Nigeria Limited. All Rights Reserved.</span>
+    <span class="rc-badge">RC: 965501 | CAC Registered</span>
+    <span>Designed with excellence for Nigerian business.</span>
+  </div>
+</footer>
+
+</body>
+</html>
