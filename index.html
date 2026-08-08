@@ -4,20 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aquiline Crystal Nigeria Limited – Business Integration Company</title>
-   <link rel="stylesheet" href="styles.css"> 
+  
+  <!-- ═══ PREMIUM FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+ <!-- ═══ FAVICON ═══ -->
+<link rel="icon" type="image/png" href="images/logo 3.png">
+<!-- ═══ FONT AWESOME ═══ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- ═══ AOS ANIMATION ═══ -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- ═══ EXTERNAL CSS ═══ -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- ─── SCROLL PROGRESS ─── -->
+<div class="scroll-progress"></div>
+
 <!-- ─── NAVIGATION ─── -->
-<nav>
-    <div class="logo">
-        <img src="images/logo.png" alt="Aquiline Crystal Nigeria Limited" class="logo-img">
-    
-        <div class="logo-text">
-          <div class="company">Aquiline Crystal Nigeria Limited</div>
-          <div class="tagline">Business Integration Specialists</div>
-        </div>
+<nav id="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="Aquiline Crystal Nigeria Limited" class="logo-img">
+    <div class="logo-text">
+      <div class="company">Aquiline Crystal Nigeria Limited</div>
+      <div class="tagline">Business Integration Specialists</div>
     </div>
+  </div>
   <ul class="nav-links">
     <li><a href="#about">About Us</a></li>
     <li><a href="#services">Services</a></li>
@@ -25,147 +42,172 @@
     <li><a href="#process">Our Process</a></li>
     <li><a href="#contact" class="nav-cta">Get Started</a></li>
   </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </nav>
 
-
 <!-- ─── HERO ─── -->
-<section class="hero">
+<section class="hero" id="hero">
+  <canvas id="particleCanvas"></canvas>
+  
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="floating-shape shape3"></div>
+  
   <div class="hero-content">
-    <div class="hero-badge">Nigeria's Premier Business Integration Company</div>
-    <h1>Seamlessly Connecting <span>Your Business</span> to Limitless Possibilities</h1>
-    <p>Aquiline Crystal Nigeria Limited delivers world-class business integration solutions that unify operations, streamline processes, and accelerate sustainable growth across Nigeria and West Africa.</p>
-    <div class="hero-buttons">
-      <a href="#services" class="btn-primary">Explore Our Services</a>
-      <a href="#contact" class="btn-outline">Book a Consultation</a>
+    <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+      <i class="fas fa-star"></i> NIGERIA'S PREMIER BUSINESS INTEGRATION COMPANY
+    </div>
+    <h1 data-aos="fade-up" data-aos-delay="200">
+      Seamlessly Connecting <br><span class="typewriter-text"></span> to Limitless Possibilities
+    </h1>
+    <p data-aos="fade-up" data-aos-delay="300">Aquiline Crystal Nigeria Limited delivers world-class business integration solutions that unify operations, streamline processes, and accelerate sustainable growth across Nigeria and West Africa.</p>
+    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+      <a href="#services" class="btn-primary"><i class="fas fa-arrow-right"></i> Explore Our Services</a>
+      <a href="#contact" class="btn-outline"><i class="fas fa-calendar-check"></i> Book a Consultation</a>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="500">
+    <span>Scroll to explore</span>
+    <div class="mouse">
+      <div class="wheel"></div>
     </div>
   </div>
 </section>
 
-
 <!-- ─── STATS STRIP ─── -->
-<div class="stats-strip">
-  <div class="stat-item">
-    <div class="number">15<span>+</span></div>
+<div class="stats-strip" id="stats">
+  <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+    <div class="number"><span class="counter" data-target="15">0</span><span>+</span></div>
     <div class="label">Years of Excellence</div>
   </div>
-  <div class="stat-item">
-    <div class="number">300<span>+</span></div>
+  <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+    <div class="number"><span class="counter" data-target="300">0</span><span>+</span></div>
     <div class="label">Clients Served</div>
   </div>
-  <div class="stat-item">
-    <div class="number">12<span></span></div>
+  <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+    <div class="number"><span class="counter" data-target="12">0</span></div>
     <div class="label">Sectors Covered</div>
   </div>
-  <div class="stat-item">
-    <div class="number">98<span>%</span></div>
+  <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+    <div class="number"><span class="counter" data-target="98">0</span><span>%</span></div>
     <div class="label">Client Satisfaction Rate</div>
   </div>
 </div>
 
-
 <!-- ─── ABOUT ─── -->
-<section class="about-section" id="about">
-  <div class="section-tag">Who We Are</div>
+<section class="about-section" id="about" data-aos="fade-up">
+  <div class="section-tag" data-aos="fade-right">Who We Are</div>
   <div class="about-grid">
-    <div class="about-visual">
+    <div class="about-visual" data-aos="fade-right" data-aos-delay="100">
+      <div class="floating-icon"><i class="fas fa-chess-queen"></i></div>
       <h3>Our Story & Vision</h3>
       <p>Founded with a bold vision to redefine how Nigerian and West African businesses connect, collaborate, and compete, Aquiline Crystal Nigeria Limited has grown into a trusted authority in business integration — bridging gaps between strategy and execution.</p>
       <p>We believe every great business deserves an infrastructure that works as one — and we exist to build it. From SMEs to large conglomerates, we tailor integration solutions that fit, scale, and deliver.</p>
       <div class="about-values">
-        <div class="value-chip">🏆 Integrity</div>
-        <div class="value-chip">💡 Innovation</div>
-        <div class="value-chip">🤝 Partnerships</div>
-        <div class="value-chip">📈 Results</div>
+        <div class="value-chip" data-aos="flip-left" data-aos-delay="100"><i class="fas fa-trophy"></i> Integrity</div>
+        <div class="value-chip" data-aos="flip-left" data-aos-delay="200"><i class="fas fa-lightbulb"></i> Innovation</div>
+        <div class="value-chip" data-aos="flip-left" data-aos-delay="300"><i class="fas fa-handshake"></i> Partnerships</div>
+        <div class="value-chip" data-aos="flip-left" data-aos-delay="400"><i class="fas fa-chart-line"></i> Results</div>
       </div>
     </div>
-    <div class="about-text">
+    <div class="about-text" data-aos="fade-left" data-aos-delay="200">
       <h2>Powering Businesses Through Intelligent Integration</h2>
       <p>At Aquiline Crystal Nigeria Limited, we specialize in the art and science of bringing together the fragmented components of your business — people, processes, systems, and technology — into a cohesive, high-performing ecosystem.</p>
       <p>Business integration is no longer optional; it is the backbone of competitive advantage. We help organizations eliminate operational silos, enhance communication across departments, automate workflows, and align business goals with digital capabilities — all within the Nigerian and broader African business context.</p>
       <p>Our team of seasoned consultants, technology architects, financial advisors, and project managers work hand-in-hand with your organization to design and deploy integration strategies that are not just effective today but resilient for tomorrow.</p>
-      <div class="mission-box">
-        <strong>Our Mission</strong>
+      <div class="mission-box" data-aos="flip-up" data-aos-delay="300">
+        <strong><i class="fas fa-bullseye"></i> Our Mission</strong>
         To empower Nigerian and African businesses through transformative integration solutions that unlock efficiency, drive growth, and position our clients for enduring success in a rapidly evolving global economy.
       </div>
     </div>
   </div>
 </section>
 
-
 <!-- ─── SERVICES ─── -->
-<section class="services-section" id="services">
- <div class="section-tag">What We Do</div>
-  <h2>Comprehensive Business Integration Services</h2>
-  <p class="section-intro">We offer a full spectrum of integration services designed to unify every dimension of your business — from strategy and technology to supply chains and compliance.</p>
+<section class="services-section" id="services" data-aos="fade-up">
+  <div class="section-tag" data-aos="fade-right">What We Do</div>
+  <h2 data-aos="fade-up">Comprehensive Business Integration Services</h2>
+  <p class="section-intro" data-aos="fade-up" data-aos-delay="100">We offer a full spectrum of integration services designed to unify every dimension of your business — from strategy and technology to supply chains and compliance.</p>
 
   <div class="services-grid">
-
-    <div class="service-card">
-      <div class="service-icon">🔗</div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="service-icon"><i class="fas fa-link"></i></div>
       <h3>Enterprise Systems Integration</h3>
       <p>We connect disparate enterprise platforms — ERP, CRM, HRM, and accounting systems — into one seamless, data-driven ecosystem, eliminating redundancy and enabling real-time decision-making across your organization.</p>
+      <div class="card-glow"></div>
     </div>
 
-    <div class="service-card">
-      <div class="service-icon">📊</div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
       <h3>Business Process Optimization</h3>
       <p>We audit, redesign, and automate your core business processes to remove inefficiencies, reduce operational costs, and improve output quality — ensuring every workflow supports your strategic objectives.</p>
+      <div class="card-glow"></div>
     </div>
 
-    <div class="service-card">
-      <div class="service-icon">🤝</div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="service-icon"><i class="fas fa-handshake"></i></div>
       <h3>Mergers, Acquisitions & Business Consolidation</h3>
       <p>Our experts guide businesses through the complex integration challenges of mergers and acquisitions — harmonizing cultures, systems, financials, and operations for a smooth, value-maximizing transition.</p>
+      <div class="card-glow"></div>
     </div>
 
-    <div class="service-card">
-      <div class="service-icon">🌐</div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="service-icon"><i class="fas fa-globe"></i></div>
       <h3>Supply Chain & Vendor Integration</h3>
       <p>We build robust, transparent supply chain networks — integrating vendors, logistics partners, and procurement systems to improve visibility, reduce lead times, and strengthen your value chain from source to customer.</p>
+      <div class="card-glow"></div>
     </div>
 
-    <div class="service-card">
-      <div class="service-icon">⚙️</div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="service-icon"><i class="fas fa-cogs"></i></div>
       <h3>Digital Transformation Advisory</h3>
       <p>We help businesses transition confidently from traditional operations to digitally-enabled models — crafting a roadmap for technology adoption, data management, automation, and digital culture change.</p>
+      <div class="card-glow"></div>
     </div>
 
-    <div class="service-card">
-      <div class="service-icon">📋</div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
       <h3>Regulatory Compliance & Governance Integration</h3>
       <p>We align your business practices with Nigerian regulatory standards — CAC, FIRS, SEC, CBN, NAFDAC, and sector-specific bodies — ensuring compliance is embedded into your operations, not bolted on.</p>
+      <div class="card-glow"></div>
     </div>
 
-    <div class="service-card">
-      <div class="service-icon">💼</div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="service-icon"><i class="fas fa-briefcase"></i></div>
       <h3>Financial Systems Integration</h3>
       <p>From treasury management and payroll to investment reconciliation and financial reporting, we integrate financial workflows that give management clear, accurate, and timely visibility into the organization's fiscal health.</p>
+      <div class="card-glow"></div>
     </div>
 
-    <div class="service-card">
-      <div class="service-icon">🧠</div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="service-icon"><i class="fas fa-brain"></i></div>
       <h3>Strategic Business Development</h3>
       <p>We help organizations identify new market opportunities, structure viable business models, establish strategic partnerships, and build investor-ready frameworks — creating a foundation for scalable, sustainable expansion.</p>
+      <div class="card-glow"></div>
     </div>
 
-    <div class="service-card">
-      <div class="service-icon">🔒</div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="service-icon"><i class="fas fa-lock"></i></div>
       <h3>Data Governance & Information Security Integration</h3>
       <p>We establish data management frameworks and cybersecurity protocols that protect your critical business information, ensure data integrity, and build stakeholder confidence in your digital operations.</p>
+      <div class="card-glow"></div>
     </div>
-
   </div>
 </section>
 
-
 <!-- ─── WHY US ─── -->
-<section class="why-section" id="why">
-  <div class="section-tag">Why Choose Us</div>
-  <h2>The Aquiline Crystal Advantage</h2>
-  <p class="section-intro">We are not just consultants — we are strategic partners committed to your long-term success. Here is what sets us apart.</p>
+<section class="why-section" id="why" data-aos="fade-up">
+  <div class="section-tag" data-aos="fade-right">Why Choose Us</div>
+  <h2 data-aos="fade-up">The Aquiline Crystal Advantage</h2>
+  <p class="section-intro" data-aos="fade-up" data-aos-delay="100">We are not just consultants — we are strategic partners committed to your long-term success. Here is what sets us apart.</p>
 
   <div class="why-grid">
- <div class="why-item">
+    <div class="why-item" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="3" data-tilt-speed="300">
       <div class="why-number">01</div>
       <div>
         <h3>Deep Nigerian Market Expertise</h3>
@@ -173,7 +215,7 @@
       </div>
     </div>
 
-    <div class="why-item">
+    <div class="why-item" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="3" data-tilt-speed="300">
       <div class="why-number">02</div>
       <div>
         <h3>End-to-End Integration Capability</h3>
@@ -181,7 +223,7 @@
       </div>
     </div>
 
-    <div class="why-item">
+    <div class="why-item" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="3" data-tilt-speed="300">
       <div class="why-number">03</div>
       <div>
         <h3>Tailored, Scalable Solutions</h3>
@@ -189,7 +231,7 @@
       </div>
     </div>
 
-    <div class="why-item">
+    <div class="why-item" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="3" data-tilt-speed="300">
       <div class="why-number">04</div>
       <div>
         <h3>Proven Track Record</h3>
@@ -197,7 +239,7 @@
       </div>
     </div>
 
-    <div class="why-item">
+    <div class="why-item" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="3" data-tilt-speed="300">
       <div class="why-number">05</div>
       <div>
         <h3>Multi-Disciplinary Expert Team</h3>
@@ -205,131 +247,132 @@
       </div>
     </div>
 
-    <div class="why-item">
+    <div class="why-item" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="3" data-tilt-speed="300">
       <div class="why-number">06</div>
       <div>
         <h3>Commitment to Long-Term Partnership</h3>
         <p>We don't disappear after project delivery. We build lasting relationships, providing continuous support, performance monitoring, and iterative improvement to ensure your integration continues to deliver value over time.</p>
       </div>
     </div>
-
   </div>
 </section>
 
-
 <!-- ─── SECTORS ─── -->
-<section class="sectors-section" id="sectors">
-  <div class="section-tag">Industries We Serve</div>
-  <h2>Sector Experience Across the Nigerian Economy</h2>
-  <p class="section-intro">Our integration expertise spans the full breadth of Nigeria's economy, enabling us to deliver contextually intelligent solutions across diverse industries.</p>
+<section class="sectors-section" id="sectors" data-aos="fade-up">
+  <div class="section-tag" data-aos="fade-right">Industries We Serve</div>
+  <h2 data-aos="fade-up">Sector Experience Across the Nigerian Economy</h2>
+  <p class="section-intro" data-aos="fade-up" data-aos-delay="100">Our integration expertise spans the full breadth of Nigeria's economy, enabling us to deliver contextually intelligent solutions across diverse industries.</p>
 
   <div class="sectors-grid">
-    <div class="sector-card">
-      <div class="sector-icon">🛢️</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="50" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-oil-can"></i></div>
       <h3>Oil & Gas</h3>
       <p>Upstream, midstream & downstream integration</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">🏦</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-university"></i></div>
       <h3>Banking & Finance</h3>
       <p>Fintech, banking operations & financial services</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">📡</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="150" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-satellite-dish"></i></div>
       <h3>Telecommunications</h3>
       <p>Network integration & digital services</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">🏥</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-heartbeat"></i></div>
       <h3>Healthcare</h3>
       <p>Hospital systems, pharma & health tech</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">🚜</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="50" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-tractor"></i></div>
       <h3>Agriculture</h3>
       <p>Agribusiness, value chain & agri-tech</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">🏗️</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-building"></i></div>
       <h3>Real Estate & Construction</h3>
       <p>Project delivery, procurement & development</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">🛒</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="150" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-shopping-cart"></i></div>
       <h3>Retail & FMCG</h3>
-<p>Distribution, inventory & sales integration</p>
+      <p>Distribution, inventory & sales integration</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">🎓</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-graduation-cap"></i></div>
       <h3>Education</h3>
       <p>EdTech, institutional management & systems</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">⚡</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="50" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-bolt"></i></div>
       <h3>Energy & Power</h3>
       <p>Utilities, renewables & power distribution</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">🚢</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-truck"></i></div>
       <h3>Logistics & Transport</h3>
       <p>Fleet, freight, ports & supply chains</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">🏛️</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="150" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-landmark"></i></div>
       <h3>Government & Public Sector</h3>
       <p>MDAs, IGR, e-governance & public services</p>
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">🏭</div>
+    <div class="sector-card" data-aos="flip-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400">
+      <div class="sector-icon"><i class="fas fa-industry"></i></div>
       <h3>Manufacturing</h3>
       <p>Production systems, ERP & industrial integration</p>
     </div>
   </div>
 </section>
 
-
 <!-- ─── PROCESS ─── -->
-<section class="process-section" id="process">
-  <div class="section-tag">How We Work</div>
-  <h2>Our Proven Integration Process</h2>
-  <p class="section-intro">A structured, collaborative methodology that ensures every integration engagement delivers clarity, value, and lasting results.</p>
+<section class="process-section" id="process" data-aos="fade-up">
+  <div class="section-tag" data-aos="fade-right">How We Work</div>
+  <h2 data-aos="fade-up">Our Proven Integration Process</h2>
+  <p class="section-intro" data-aos="fade-up" data-aos-delay="100">A structured, collaborative methodology that ensures every integration engagement delivers clarity, value, and lasting results.</p>
 
   <div class="process-steps">
-    <div class="step">
-      <div class="step-circle">🔍</div>
+    <div class="step" data-aos="fade-up" data-aos-delay="100">
+      <div class="step-circle"><i class="fas fa-search"></i></div>
       <h3>Discovery & Assessment</h3>
       <p>We conduct an in-depth diagnostic of your business — mapping systems, workflows, challenges, and strategic goals to create a complete integration landscape picture.</p>
+      <div class="step-line"></div>
     </div>
-    <div class="step">
-      <div class="step-circle">🗺️</div>
+    <div class="step" data-aos="fade-up" data-aos-delay="200">
+      <div class="step-circle"><i class="fas fa-map"></i></div>
       <h3>Strategy & Blueprint</h3>
       <p>We co-develop a customized integration roadmap with clear milestones, resource plans, technology recommendations, and measurable outcomes aligned to your vision.</p>
+      <div class="step-line"></div>
     </div>
-    <div class="step">
-      <div class="step-circle">⚙️</div>
+    <div class="step" data-aos="fade-up" data-aos-delay="300">
+      <div class="step-circle"><i class="fas fa-code"></i></div>
       <h3>Design & Development</h3>
       <p>Our experts engineer the integration architecture — configuring systems, redesigning processes, and building the frameworks needed to bring your blueprint to life.</p>
+      <div class="step-line"></div>
     </div>
-    <div class="step">
-      <div class="step-circle">🚀</div>
+    <div class="step" data-aos="fade-up" data-aos-delay="400">
+      <div class="step-circle"><i class="fas fa-rocket"></i></div>
       <h3>Implementation</h3>
       <p>We execute the integration plan with precision, managing change, training teams, and deploying solutions in a structured, minimum-disruption manner.</p>
+      <div class="step-line"></div>
     </div>
-    <div class="step">
-      <div class="step-circle">📈</div>
+    <div class="step" data-aos="fade-up" data-aos-delay="500">
+      <div class="step-circle"><i class="fas fa-chart-line"></i></div>
       <h3>Optimization & Support</h3>
       <p>Post-deployment, we monitor performance, fine-tune the integration, and provide ongoing support to ensure continuous improvement and sustained value delivery.</p>
+      <div class="step-line"></div>
     </div>
   </div>
 </section>
 
-
 <!-- ─── TESTIMONIALS ─── -->
-<section class="testimonial-section">
-  <h2>What Our Clients Say</h2>
+<section class="testimonial-section" data-aos="fade-up">
+  <h2 data-aos="fade-up">What Our Clients Say</h2>
 
   <div class="testimonials-grid">
-    <div class="testimonial-card">
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
       <div class="quote-mark">"</div>
       <p>Aquiline Crystal transformed how our group of companies operates. Within six months of their enterprise integration project, we reduced operational costs by 32% and our reporting time dropped from 2 weeks to 2 days. Their team truly understands the Nigerian business environment.</p>
       <div class="testimonial-author">
@@ -338,7 +381,7 @@
       </div>
     </div>
 
-    <div class="testimonial-card">
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
       <div class="quote-mark">"</div>
       <p>The M&A integration support we received during our acquisition was nothing short of exceptional. They managed the complexity of merging two company cultures and ERP systems simultaneously. We are now operating as a single, unified entity far ahead of schedule.</p>
       <div class="testimonial-author">
@@ -346,7 +389,8 @@
         <span>CEO, Energy and Grid Industrial Ltd</span>
       </div>
     </div>
- <div class="testimonial-card">
+
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
       <div class="quote-mark">"</div>
       <p>As a fast-scaling fintech, we needed our compliance, operations, and technology to grow in sync. Aquiline Crystal designed an integration model that has since become the foundation of how we operate. I recommend them without reservation.</p>
       <div class="testimonial-author">
@@ -357,151 +401,278 @@
   </div>
 </section>
 
+<!-- ─── BUSINESS VERTICALS ─── -->
+<section class="verticals-section" id="verticals" data-aos="fade-up">
+  <div class="section-tag" data-aos="fade-right">Our Business Verticals</div>
+  <h2 data-aos="fade-up">Driving Impact Across Key Sectors</h2>
+  <p class="section-intro" data-aos="fade-up" data-aos-delay="100">Aquiline Crystal Nigeria Limited operates across three strategic verticals — Infrastructure & Real Estate, Industrial Commodity Trading, and Agribusiness & Agro-Industrial Development — each structured for institutional-grade returns and measurable national impact.</p>
+
+  <div class="verticals-grid">
+    
+    <!-- ─── VERTICAL 1: INFRASTRUCTURE ─── -->
+    <div class="vertical-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="4" data-tilt-speed="400">
+      <div class="vertical-icon"><i class="fas fa-building"></i></div>
+      <div class="vertical-tag">Build-Operate-Transfer</div>
+      <h3>Infrastructure &amp; Real Estate Development</h3>
+      <div class="vertical-content">
+        <p><strong>AQCNL develops institutional-grade infrastructure</strong> across Nigeria's education and housing sectors, using Build-Operate-Transfer (BOT) structures that align investor returns with long-term national development impact.</p>
+        
+        <p><strong>Our current client</strong> is <strong>Evangel University, Akaeze</strong>, where we hold a secured Approval-in-Principle (AIP) for a large-scale student hostel development. Our long-term vision is to build over <strong>20,000 hostel rooms</strong> across multiple institutions nationwide.</p>
+        
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-home"></i> Build-Operate-Transfer (BOT) Student Housing</h4>
+          <p>Nigeria's tertiary institutions face a severe shortage of quality student accommodation. AQCNL addresses this gap through BOT hostel developments,financing,constructing,and operating modern student housing under long-term concession agreements with universities,before eventual transfer of ownership at concession maturity.</p>
+          <p>Our BOT model is built for institutional investment: predictable rental income, long concession tenors, and structured exit windows for multiple investor classes.</p>
+        </div>
+
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-university"></i> Current Client: Evangel University</h4>
+          <p>Our active infrastructure client is <strong>Evangel University, Akaeze, Ebonyi State</strong>, where AQCNL has secured an Approval-in-Principle (AIP) for a large-scale student hostel development under a long-term BOT concession. This project is structured with disciplined capex and rental assumptions for DFI-grade underwriting, and serves as the anchor project for our broader national infrastructure vision.</p>
+        </div>
+
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-eye"></i> Our Vision: 20,000+ Beds Nationwide</h4>
+          <p>Beyond Evangel, AQCNL's infrastructure strategy is built as a scalable, replicable platform rather than a single-project exercise. Our vision is to develop over <strong>20,000 student hostel rooms</strong> across multiple Nigerian tertiary institutions, using a standardized structuring, financial modelling, and governance methodology at each site. This positions AQCNL to engage further institutions and investors as the model proves out at Evangel.</p>
+        </div>
+
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-handshake"></i> Investment Structure &amp; Institutional Partners</h4>
+          <p>Our infrastructure developments are structured to meet the underwriting requirements of diverse investor classes, including:</p>
+          <ul class="vertical-list">
+            <li><i class="fas fa-check-circle"></i> Pension Fund Administrators (PFAs) — long-duration, infrastructure-matched fixed income exposure</li>
+            <li><i class="fas fa-check-circle"></i> Development Finance Institutions (DFIs) — including relationships developed through Nordrock Limited and FMO</li>
+            <li><i class="fas fa-check-circle"></i> Private Equity &amp; Venture Capital</li>
+            <li><i class="fas fa-check-circle"></i> High-Net-Worth Individuals and Diaspora Investors</li>
+            <li><i class="fas fa-check-circle"></i> Crowdfunding platforms for accessible retail participation in Nigerian infrastructure</li>
+          </ul>
+          <p>We also work with strategic partners such as <strong>Trinity Telecommunication (Hubli, Karnataka, India)</strong> to bring international best practice and technology to our developments.</p>
+        </div>
+
+        <div class="vertical-cta">
+          <a href="#contact" class="btn-vertical">Partner With Us <i class="fas fa-arrow-right"></i></a>
+          <span>We welcome conversations with universities, investors, and development finance institutions interested in our BOT hostel model.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── VERTICAL 2: COMMODITY TRADING ─── -->
+    <div class="vertical-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="4" data-tilt-speed="400">
+      <div class="vertical-icon"><i class="fas fa-ship"></i></div>
+      <div class="vertical-tag">Specialized Trading Desk</div>
+      <h3>Industrial Commodity Trading</h3>
+      <div class="vertical-content">
+        <p><strong>AQCNL operates a specialized industrial commodity trading desk</strong> serving Nigeria's fertilizer, petrochemical, mining, and manufacturing sectors. We connect verified international suppliers with Nigeria's largest industrial buyers, managing sourcing, logistics, quality assurance, and contract execution from origin to delivery.</p>
+
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-boxes"></i> Commodities We Trade</h4>
+          <ul class="vertical-list">
+            <li><i class="fas fa-circle"></i> <strong>Granular Sulphur</strong>— High-purity granular sulphur (99.8% purity, Iraqi origin) supplied to fertilizer producers and industrial chemical manufacturers across Nigeria.</li>
+            <li><i class="fas fa-circle"></i> <strong>Sulphuric Acid</strong>— Bulk industrial-grade sulphuric acid for fertilizer blending, mineral processing, and chemical manufacturing applications.</li>
+            <li><i class="fas fa-circle"></i> <strong>Calcined Petroleum Coke (CPC)</strong>— Sourced for aluminium smelting, steel production, and other carbon-intensive industrial processes, including emerging Nigeria-origin supply chains linked to domestic refining capacity.</li>
+            <li><i class="fas fa-circle"></i> <strong>Fumigation Chemicals</strong>— Regulated agricultural and industrial fumigation products supplied in compliance with Nigerian safety and handling standards.</li>
+            <li><i class="fas fa-circle"></i> <strong>Carbon Monoxide</strong>— Industrial gas supply for specialized manufacturing and processing applications.</li>
+            <li><i class="fas fa-circle"></i> <strong>Monazite Sand</strong>— Rare earth mineral sand trading, conducted under full NNRA (Nigerian Nuclear Regulatory Authority) licensing and compliance protocols.</li>
+          </ul>
+        </div>
+
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-exchange-alt"></i> Supply Chain &amp; Trade Terms</h4>
+          <p>AQCNL structures commodity transactions on internationally recognized trade terms to protect all parties:</p>
+          <ul class="vertical-list">
+            <li><i class="fas fa-check-circle"></i> CIF (Cost, Insurance, Freight) pricing structures</li>
+            <li><i class="fas fa-check-circle"></i> MT 700 Irrevocable Letters of Credit for secured payment</li>
+            <li><i class="fas fa-check-circle"></i> Independent quality verification via SGS and Intertek pre-shipment inspection</li>
+            <li><i class="fas fa-check-circle"></i> End-to-end logistics coordination from port of origin to Nigerian point of delivery</li>
+          </ul>
+        </div>
+
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-handshake"></i> Key Markets &amp; Buyer Relationships</h4>
+          <p>Our commodity trading desk maintains active engagement with Nigeria's leading industrial consumers, including major fertilizer producers, petrochemical processors, and chemical manufacturers. We source both from established international suppliers and are actively developing Nigeria-origin supply chains — including potential calcined petroleum coke offtake linked to domestic refining output — to strengthen local supply chain resilience and reduce import dependency.</p>
+        </div>
+
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-shield-alt"></i> Sourcing &amp; Origin Assurance</h4>
+          <p>Every commodity transaction AQCNL facilitates is backed by verified origin documentation, regulatory compliance (including NNRA licensing where applicable), and independent inspection at load port and discharge. This rigor protects buyers from quality risk and ensures reliable, repeatable supply relationships.</p>
+        </div>
+
+        <div class="vertical-cta">
+          <a href="#contact" class="btn-vertical">Request a Commodity Quotation <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── VERTICAL 3: AGRIBUSINESS ─── -->
+    <div class="vertical-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="4" data-tilt-speed="400">
+      <div class="vertical-icon"><i class="fas fa-seedling"></i></div>
+      <div class="vertical-tag">Public-Private Partnerships</div>
+      <h3>Agribusiness &amp; Agro-Industrial Development</h3>
+      <div class="vertical-content">
+        <p><strong>Aquiline Crystal Nigeria Limited (AQCNL)</strong> builds and operationalizes bankable agribusiness ventures that strengthen Nigeria's food security, create rural employment, and deliver strong, verifiable returns for institutional investors.</p>
+        
+        <p>Our agribusiness practice is anchored by the <strong>Abia Commercial Mushroom Enterprise (ACME)</strong> a public-private partnership currently in advanced-stage discussion with Abia State Government — and we are actively open to structuring similar partnerships with other Nigerian states.</p>
+
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-mushroom"></i> The Abia Commercial Mushroom Enterprise (ACME)</h4>
+          <p><strong>ACME is our flagship agribusiness initiative:</strong> a large-scale commercial mushroom cultivation enterprise being developed in partnership with the Abia State Government, currently at an advanced stage of engagement.</p>
+          <p>ACME is designed to cultivate high-value mushroom species including Oyster, Shiitake, Reishi, and Lion's Mane for domestic and export markets, using controlled-environment greenhouse production and solar-powered infrastructure. The project is structured as a demonstrable, replicable model for state-level agribusiness PPPs.</p>
+          <p>Beyond Abia, AQCNL is open to further discussions with other Nigerian state governments interested in adopting a similar public-private partnership approach to commercial agriculture.</p>
+        </div>
+
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-list-check"></i> Key Features of Our Mushroom Agribusiness Model:</h4>
+          <ul class="vertical-list">
+            <li><i class="fas fa-check-circle"></i> Multi-species cultivation (Oyster, Shiitake, Reishi, Lion's Mane, King Oyster, White Button)</li>
+            <li><i class="fas fa-check-circle"></i> Solar-powered greenhouse infrastructure for climate-controlled yield consistency</li>
+            <li><i class="fas fa-check-circle"></i> Structured off-take and storefront distribution to institutional, retail, and export buyers</li>
+            <li><i class="fas fa-check-circle"></i> Phase 2 diversification into functional mushroom products (immunity and wellness-focused derivatives)</li>
+            <li><i class="fas fa-check-circle"></i> Investment-grade financial modelling aligned to DFI evaluation standards</li>
+          </ul>
+        </div>
+
+        <div class="vertical-subsection">
+          <h4><i class="fas fa-handshake"></i> Public-Private Partnerships in Agriculture</h4>
+          <p>AQCNL structures and negotiates agribusiness PPPs directly with state governments, positioning agriculture as a driver of internally generated revenue (IGR) and rural economic development. Our PPP model protects both public interest and investor capital through clear equity structures, anti-expropriation provisions, and transparent governance.</p>
+          <p>While Abia State represents our current and most advanced state partnership, our model is built to scale. We welcome conversations with <strong>any Nigerian state government</strong> interested in exploring a commercial agribusiness PPP for their region.</p>
+        </div>
+
+       <div class="vertical-subsection">
+  <h4><i class="fas fa-handshake"></i> Technical &amp; Financial Partnerships</h4>
+  <p>We work alongside recognized institutional partners to ensure our agribusiness ventures meet international bankability standards:</p>
+  <ul class="vertical-list">
+    <li><i class="fas fa-check-circle"></i> <strong>NIHORT</strong> (National Institute of Horticultural Research) technical partner for cultivation science, species selection, and agronomic best practice</li>
+    <li><i class="fas fa-check-circle"></i> <strong>Nordrock Limited (Belgium)</strong> financial consultant and capital introduction partner for DFI-grade transactions</li>
+    <li><i class="fas fa-check-circle"></i> <strong>FMO</strong> (Dutch Entrepreneurial Development Bank) target development finance institution for agribusiness capital raises</li>
+    <li><i class="fas fa-check-circle"></i> <strong>NIRSAL</strong> (Nigeria Incentive-Based Risk Sharing System for Agricultural Lending) strategic partner for strengthening PPP bankability and agricultural finance structuring, alongside engagement with other Nigerian agricultural finance institutions to expand access to concessionary capital</li>
+  </ul>
+</div>
+
+        <div class="vertical-cta">
+          <a href="#contact" class="btn-vertical">Request an Agribusiness Investment Brief <i class="fas fa-arrow-right"></i></a>
+          <span>Whether you are a state government exploring a commercial agriculture PPP, or an investor interested in the ACME opportunity, we welcome the conversation.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- ─── CONTACT ─── -->
-<section class="contact-section" id="contact">
-  <div class="section-tag">Get In Touch</div>
-  <h2>Let's Integrate Your Business for Success</h2>
-  <p class="section-intro">Ready to eliminate operational silos and unlock your organization's full potential? Reach out to our team today for a no-obligation consultation.</p>
+<section class="contact-section" id="contact" data-aos="fade-up">
+  <div class="section-tag" data-aos="fade-right">Get In Touch</div>
+  <h2 data-aos="fade-up">Let's Integrate Your Business for Success</h2>
+  <p class="section-intro" data-aos="fade-up" data-aos-delay="100">Ready to eliminate operational silos and unlock your organization's full potential? Reach out to our team today for a no-obligation consultation.</p>
 
   <div class="contact-grid">
-    <div class="contact-info">
+    <div class="contact-info" data-aos="fade-right">
       <h3>Contact Information</h3>
 
-      <div class="contact-detail">
-        <span class="icon">📍</span>
+      <div class="contact-detail" data-aos="fade-up" data-aos-delay="100">
+        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
         <div>
           <strong>Head Office</strong>
           <p>2 Saudat Saliu Ogidan Estate Ajah, Lagos, Nigeria</p>
         </div>
       </div>
 
-      <div class="contact-detail">
-        <span class="icon">📞</span>
+      <div class="contact-detail" data-aos="fade-up" data-aos-delay="150">
+        <span class="icon"><i class="fas fa-phone"></i></span>
         <div>
           <strong>Phone</strong>
-          <p>+234 (0) 800 AQUILINE<br/>+234 (0) 1 280 0000<br/>+234 (0) 7036802353 </p>
-          
+          <p>+234 (0) 800 AQUILINE<br/>+234 (0) 1 280 0000<br/>+234 (0) 7036802353</p>
         </div>
       </div>
 
-      <div class="contact-detail">
-        <span class="icon">✉️</span>
+      <div class="contact-detail" data-aos="fade-up" data-aos-delay="200">
+        <span class="icon"><i class="fas fa-envelope"></i></span>
         <div>
           <strong>Email</strong>
           <p>info@aqcnl.com<br/>partnership@aqcnl.com.ng</p>
         </div>
       </div>
 
-      <div class="contact-detail">
-        <span class="icon">🕐</span>
+      <div class="contact-detail" data-aos="fade-up" data-aos-delay="250">
+        <span class="icon"><i class="fas fa-clock"></i></span>
         <div>
           <strong>Business Hours</strong>
           <p>Monday – Friday: 8:00 AM – 6:00 PM<br/>Saturday: 9:00 AM – 2:00 PM</p>
         </div>
       </div>
 
-      <div class="contact-detail">
-        <span class="icon">🏢</span>
+      <div class="contact-detail" data-aos="fade-up" data-aos-delay="300">
+        <span class="icon"><i class="fas fa-building"></i></span>
         <div>
           <strong>Regional Office (South-South)</strong>
           <p>87 Aka Itam Street opposite Akwa Savings and Loans housing Estate Uyo Akwa Ibom</p>
         </div>
       </div>
     </div>
-<form class="contact-form"
-      action="https://formsubmit.co/info@aqcnl.com"
-      method="POST">
 
-  <!-- Optional Settings -->
-  <input type="hidden" name="_subject" value="New Business Enquiry">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
+    <form class="contact-form" action="https://formsubmit.co/info@aqcnl.com" method="POST" data-aos="fade-left">
+      <input type="hidden" name="_subject" value="New Business Enquiry">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
-  <div class="form-row">
-    <div class="form-group">
-      <label>First Name *</label>
-      <input type="text"
-             name="first_name"
-             placeholder="Enter your first name"
-             required />
-    </div>
+      <div class="form-row">
+        <div class="form-group" data-aos="fade-up" data-aos-delay="100">
+          <label>First Name <span class="required">*</span></label>
+          <input type="text" name="first_name" placeholder="Enter your first name" required />
+        </div>
+        <div class="form-group" data-aos="fade-up" data-aos-delay="150">
+          <label>Last Name <span class="required">*</span></label>
+          <input type="text" name="last_name" placeholder="Enter your last name" required />
+        </div>
+      </div>
 
-    <div class="form-group">
-      <label>Last Name *</label>
-      <input type="text"
-             name="last_name"
-             placeholder="Enter your last name"
-             required />
-    </div>
-  </div>
+      <div class="form-row">
+        <div class="form-group" data-aos="fade-up" data-aos-delay="200">
+          <label>Email Address <span class="required">*</span></label>
+          <input type="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group" data-aos="fade-up" data-aos-delay="250">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="+234 xxx xxx xxxx" />
+        </div>
+      </div>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label>Email Address *</label>
-      <input type="email"
-             name="email"
-             placeholder="your@email.com"
-             required />
-    </div>
+      <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+        <label>Company / Organization</label>
+        <input type="text" name="company" placeholder="Your company name" />
+      </div>
 
-    <div class="form-group">
-      <label>Phone Number</label>
-      <input type="tel"
-             name="phone"
-             placeholder="+234 xxx xxx xxxx" />
-    </div>
-  </div>
+      <div class="form-group" data-aos="fade-up" data-aos-delay="350">
+        <label>Service of Interest <span class="required">*</span></label>
+        <select name="service" required>
+          <option value="">— Select a Service —</option>
+          <option>Enterprise Systems Integration</option>
+          <option>Business Process Optimization</option>
+          <option>Mergers, Acquisitions & Consolidation</option>
+          <option>Supply Chain & Vendor Integration</option>
+          <option>Digital Transformation Advisory</option>
+          <option>Regulatory Compliance & Governance</option>
+          <option>Financial Systems Integration</option>
+          <option>Strategic Business Development</option>
+          <option>Data Governance & Security Integration</option>
+          <option>Other</option>
+        </select>
+      </div>
 
-  <div class="form-group">
-    <label>Company / Organization</label>
-    <input type="text"
-           name="company"
-           placeholder="Your company name" />
-  </div>
+      <div class="form-group" data-aos="fade-up" data-aos-delay="400">
+        <label>Tell Us About Your Integration Needs <span class="required">*</span></label>
+        <textarea name="message" placeholder="Briefly describe your business challenge or the integration outcome you are seeking..." required></textarea>
+      </div>
 
-  <div class="form-group">
-    <label>Service of Interest *</label>
-
-    <select name="service" required>
-      <option value="">— Select a Service —</option>
-      <option>Enterprise Systems Integration</option>
-      <option>Business Process Optimization</option>
-      <option>Mergers, Acquisitions & Consolidation</option>
-      <option>Supply Chain & Vendor Integration</option>
-      <option>Digital Transformation Advisory</option>
-      <option>Regulatory Compliance & Governance</option>
-      <option>Financial Systems Integration</option>
-      <option>Strategic Business Development</option>
-      <option>Data Governance & Security Integration</option>
-      <option>Other</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label>Tell Us About Your Integration Needs *</label>
-
-    <textarea name="message"
-              placeholder="Briefly describe your business challenge or the integration outcome you are seeking..."
-              required></textarea>
-  </div>
-
-  <button type="submit" class="form-submit">
-    Send Enquiry →
-  </button>
-
-</form>
-    <div>
-
-    </div>
+      <button type="submit" class="form-submit" data-aos="fade-up" data-aos-delay="450">
+        <i class="fas fa-paper-plane"></i> Send Enquiry →
+      </button>
+    </form>
   </div>
 </section>
-
 
 <!-- ─── FOOTER ─── -->
 <footer>
   <div class="footer-grid">
-    <div class="footer-brand">
+    <div class="footer-brand" data-aos="fade-up">
       <div class="logo">
         <img src="images/logo.png" alt="Aquiline Crystal Nigeria Limited" class="logo-img">
         <div class="logo-text">
@@ -512,55 +683,300 @@
       <p>We are Nigeria's foremost business integration company — dedicated to unifying people, processes, technology, and strategy into high-performance organizations. Registered with the Corporate Affairs Commission (CAC), Nigeria.</p>
     </div>
 
-    <div class="footer-col">
+    <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
       <h4>Services</h4>
       <ul>
-        <li><a href="#">Enterprise Integration</a></li>
-        <li><a href="#">Process Optimization</a></li>
-        <li><a href="#">M&A Integration</a></li>
-        <li><a href="#">Supply Chain Integration</a></li>
-        <li><a href="#">Digital Transformation</a></li>
-        <li><a href="#">Regulatory Compliance</a></li>
-        <li><a href="#">Financial Integration</a></li>
-        <li><a href="#">Data Governance</a></li>
+        <li><a href="#services"><i class="fas fa-chevron-right"></i> Enterprise Integration</a></li>
+        <li><a href="#services"><i class="fas fa-chevron-right"></i> Process Optimization</a></li>
+        <li><a href="#services"><i class="fas fa-chevron-right"></i> M&A Integration</a></li>
+        <li><a href="#services"><i class="fas fa-chevron-right"></i> Supply Chain Integration</a></li>
+        <li><a href="#services"><i class="fas fa-chevron-right"></i> Digital Transformation</a></li>
+        <li><a href="#services"><i class="fas fa-chevron-right"></i> Regulatory Compliance</a></li>
+        <li><a href="#services"><i class="fas fa-chevron-right"></i> Financial Integration</a></li>
+        <li><a href="#services"><i class="fas fa-chevron-right"></i> Data Governance</a></li>
       </ul>
     </div>
 
-    <div class="footer-col">
+    <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
       <h4>Company</h4>
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Team</a></li>
-        <li><a href="#">Sectors We Serve</a></li>
-        <li><a href="#">Case Studies</a></li>
-        <li><a href="#">Insights & Blog</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Partnerships</a></li>
-        <li><a href="#">CSR Initiatives</a></li>
+        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+        <li><a href="#about"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+        <li><a href="#sectors"><i class="fas fa-chevron-right"></i> Sectors We Serve</a></li>
+        <li><a href="#sectors"><i class="fas fa-chevron-right"></i> Case Studies</a></li>
+        <li><a href="#verticals"><i class="fas fa-chevron-right"></i> Insights &amp; Blog</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Careers</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> Partnerships</a></li>
+        <li><a href="#"><i class="fas fa-chevron-right"></i> CSR Initiatives</a></li>
       </ul>
     </div>
 
-    <div class="footer-col">
+    <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
       <h4>Connect</h4>
       <ul>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Twitter / X</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">YouTube</a></li>
-        <li><a href="#">Newsletter</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter / X</a></li>
+        <li><a href="https://www.facebook.com/share/1EthtopZ6R/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+        <li><a href="https://www.instagram.com/aquilinecrystal?igsh=eW8yNWR1anpqeTF1" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <!-- <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li> -->
+        <li><a href="#"><i class="fas fa-newspaper"></i> Newsletter</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+        <li><a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
       </ul>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <span>© 2025 Aquiline Crystal Nigeria Limited. All Rights Reserved.</span>
-    <span class="rc-badge">RC: 965501 | CAC Registered</span>
-    <span>Designed with excellence for Nigerian business.</span>
+    <span>© 2026 Aquiline Crystal Nigeria Limited. All Rights Reserved.</span>
+    <span class="rc-badge"><i class="fas fa-registered"></i> RC: 965501 | CAC Registered</span>
+    <!-- <span>Designed with excellence for Nigerian business.</span> -->
   </div>
 </footer>
+
+<!-- ═══ LIBRARIES ═══ -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+<!-- ═══ CUSTOM SCRIPTS ═══ -->
+<script>
+// ─── AOS INIT ─── (Animates ONCE only)
+AOS.init({
+  duration: 800,
+  once: true,          // ← Elements animate ONLY ONCE when they first appear
+  offset: 80,
+  easing: 'ease-out-cubic',
+  mirror: false        // ← No re-animation when scrolling back up
+});
+
+// ─── NAVBAR SCROLL EFFECT ───
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// ─── HAMBURGER MENU ───
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+}
+
+// ─── SMOOTH ANCHOR SCROLL ───
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    }
+  });
+});
+
+// ─── TYPEWRITER EFFECT ───
+class TypeWriter {
+  constructor(element, words, wait = 3000) {
+    this.element = element;
+    this.words = words;
+    this.wait = wait;
+    this.txt = '';
+    this.wordIndex = 0;
+    this.isDeleting = false;
+    this.type();
+  }
+
+  type() {
+    const current = this.wordIndex % this.words.length;
+    const fullTxt = this.words[current];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.element.innerHTML = `<span class="highlight">${this.txt}</span>`;
+
+    let typeSpeed = 120;
+
+    if (this.isDeleting) {
+      typeSpeed = 60;
+    }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      typeSpeed = this.wait;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.wordIndex++;
+      typeSpeed = 400;
+    }
+
+    setTimeout(() => this.type(), typeSpeed);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const typewriterElement = document.querySelector('.typewriter-text');
+  if (typewriterElement) {
+    new TypeWriter(typewriterElement, ['Your Business', 'Your Vision', 'Your Goals', 'Your Future']);
+  }
+});
+
+// ─── COUNTER ANIMATION ─── (Triggers ONCE when visible)
+const counters = document.querySelectorAll('.counter');
+
+const animateCounter = (counter) => {
+  const target = parseInt(counter.getAttribute('data-target'));
+  const duration = 2000;
+  const step = Math.max(1, Math.floor(target / 60));
+  let current = 0;
+
+  const updateCounter = () => {
+    current += step;
+    if (current >= target) {
+      counter.textContent = target;
+      return;
+    }
+    counter.textContent = current;
+    requestAnimationFrame(updateCounter);
+  };
+
+  updateCounter();
+};
+
+// Counter observer - triggers ONCE per counter
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counter = entry.target;
+      animateCounter(counter);
+      counterObserver.unobserve(counter); // ← Stops observing after animation
+    }
+  });
+}, { threshold: 0.5 });
+
+counters.forEach(counter => counterObserver.observe(counter));
+
+// ─── PARTICLE SYSTEM ───
+class Particle {
+  constructor(canvas, ctx) {
+    this.canvas = canvas;
+    this.ctx = ctx;
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 3 + 1;
+    this.speedX = (Math.random() - 0.5) * 0.5;
+    this.speedY = (Math.random() - 0.5) * 0.5;
+    this.opacity = Math.random() * 0.5 + 0.2;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    if (this.x > this.canvas.width) this.x = 0;
+    if (this.x < 0) this.x = this.canvas.width;
+    if (this.y > this.canvas.height) this.y = 0;
+    if (this.y < 0) this.y = this.canvas.height;
+  }
+
+  draw() {
+    this.ctx.beginPath();
+    this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    this.ctx.fillStyle = `rgba(200, 151, 43, ${this.opacity})`;
+    this.ctx.fill();
+  }
+}
+
+const canvas = document.getElementById('particleCanvas');
+if (canvas) {
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+
+  const resizeCanvas = () => {
+    canvas.width = canvas.parentElement.offsetWidth;
+    canvas.height = canvas.parentElement.offsetHeight;
+  };
+
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  for (let i = 0; i < 80; i++) {
+    particles.push(new Particle(canvas, ctx));
+  }
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(particle => {
+      particle.update();
+      particle.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  animateParticles();
+}
+
+// ─── TILT EFFECT ───
+VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
+  max: 5,
+  speed: 400,
+  glare: true,
+  'max-glare': 0.2,
+  scale: 1.02,
+  perspective: 1000
+});
+
+// ─── FORM SUBMISSION ───
+const form = document.querySelector('.contact-form');
+if (form) {
+  form.addEventListener('submit', function(e) {
+    const submitBtn = this.querySelector('.form-submit');
+    submitBtn.innerHTML = '⏳ Sending...';
+    submitBtn.disabled = true;
+    
+    setTimeout(() => {
+      submitBtn.innerHTML = '✅ Sent Successfully!';
+      submitBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+      
+      setTimeout(() => {
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Enquiry →';
+        submitBtn.style.background = '';
+        submitBtn.disabled = false;
+        this.reset();
+      }, 3000);
+    }, 1500);
+  });
+}
+
+// ─── SCROLL PROGRESS ───
+const scrollProgress = document.querySelector('.scroll-progress');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  if (scrollProgress) {
+    scrollProgress.style.width = progress + '%';
+  }
+});
+</script>
 
 </body>
 </html>
